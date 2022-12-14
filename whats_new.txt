@@ -1,0 +1,156 @@
+2020.5.9:
+    The Grab tool now works correctly in the UV editor.
+
+    Fixed a rare bug in interactive tools, where sometimes there was a message about parallel lines.
+
+    Fixed information in the documentation on how to correctly add custom radial menus to the Modeler mode.
+
+    Dropped support for Houdini 18.0 version. The Gumroad archive will still contain version 2020.5.8 for Houdini 18.0.
+
+
+2020.5.8:
+    Fixed a bug that caused incorrect work of interactive tools in ortho views.
+
+
+2020.5.7:
+    Fixed broken Move, Rotate, Scale tools In Houdini 18.0.
+
+    Frame and Frame no longer affect the node editor.
+
+    Finally, in Houdini 18.5 on Windows, the input lag is removed when using sticky (volatile) tools such as a Grab, Slide and Peak. Fast transformation of components is now smoother.
+
+
+2020.5.6:
+    Fixed a bug where the mouse wheel changes the resolution and size of the QPrimitive SOP at the same time.
+
+    Fixed some issues in the MultiLoop SOP.
+
+
+2020.5.5:
+    Fixed bug with flying away camera when using the Grab tool at the object level.
+
+
+2020.5.4:
+    The Modeler shelf has been fixed.
+
+
+2020.5.3:
+    The bug where it is impossible to load hotkey files when switching from Python2 to Python3 has been fixed.
+
+    Lattice now works correctly with flat surfaces.
+
+    Falloff Transform snapping now works correctly.
+
+
+2020.5.2:
+    Added a new MultiLoop tool that allows you to insert loops at selected edges.
+
+    The Modeler shelf fixed.
+   
+    Thickness fixed.
+
+    QPrimitive fixed.
+
+    Fixed hotkeys issues. You have to resetup keyboard and mouse layouts.
+
+
+2020.5.1:
+    Skin, New Patch and New Stripe topo tools was fixed.
+
+    The Topo Mode menu item replaced with a Skin item. Use Launcher to activate\deactivate Topo mode.
+
+    The high-poly node is now hidden, while you are in Topo mode.
+
+    Some fixes in the Bridge and Project SOPs.
+
+    AlignView is now working as expected.
+
+    H18.5 Python 2 build is working without having to rename the folder.
+
+
+2020.5:
+    The internal architecture of the Modeler has been reworked. Lots of optimizations. Improved performance and stability.
+
+
+    New toolkit for retopology (Z menu) of high poly models. A special node type TopoPatch allows you to outline the reference geometry in minutes. The behavior of the standard retopology tools has also been improved. Push in topology mode snaps points to the reference model.
+
+
+    When you use Reload shelf tool, the launched modeler is closed, but now it needs to be started again manually.
+
+
+    Launcher redesigned. Improved highlighting of the active tool. Tool categories have been revised. There are now separate categories for interactive tools: Deform States and Mesh States. The Mouse category has been renamed to State. This category contains tools related to states.
+
+
+    Improved Hotkey Editor. Now you can use the Alt modifier for any tool.
+
+
+    All Modeler nodes now have their own namespace, such as "modeler::extrude" or "modeler::qlight". This is to resolve name conflicts. Third-party plugins no longer interfere with the correct work of the Modeler.
+
+
+    The interactive tool system used by tools like Grab, Extrude, Push has been completely redesigned.
+    Ctrl+LMB Drag is now used in tools to change iteration parameters, for example, the amount of divisions in the Extrude node. This is an alternative to using the mouse wheel (WheelUp \ WheelDown), for people using the pen.
+
+
+    The PreviewSubdivided (Alt+1) and PreviewSubdividedWire (Alt+2) tools have been reworked. You can now adjust the number of smoothing iterations with the WheelUp and WheelDown tools. That is, you can use the mouse wheel or the left/right arrow keys. Divisions count is remembered between tool runs.
+
+
+    Creating primitives or inserting geometry from KitBash now works differently:
+       1. If polygons are selected, the tools will insert geometry at the specified location using the average normal. After running, the tool will ask you to select a vertical reference edge for the correct orientation of the geometry. If the edge is not selected, then the inserted object will not rotate, but only move to the center of the selected polygons.
+
+       2. If nothing is selected, the object will be inserted simply at the center of the world coordinates without rotation.
+
+
+    Reworked the WheelUp and WheelDown tools, which are launched with the mouse wheel or the left/right arrow keys. They can be used to modify SOPs such as:
+
+        edit
+        polysplit::2.0
+        edgeloop
+        polyfill
+        modeler::extrude
+        modeler::bevel
+        modeler::hose
+        modeler::thickness
+        modeler::bridge
+        modeler::qprimitive
+        modeler::insert_mesh
+        modeler::soft_boolean
+        modeler::falloff_xform
+        modeler::topopatch
+        modeler::array
+        bound (Lattice)
+        copyxform
+        
+        For other types of nodes, the tool will try to find the "scale" parameter and use it.
+
+
+    InsertMesh has been improved. Now you can automatically remove the inner edges of connection polygons.
+    Also, the node no longer requires creating normals for the inserted geometry (Input Connection 2).
+    The node now has a button for automatically adding normals to the original geometry (Input Connection 1).
+    The button simply creates a Normal SOP node and embeds it in the nodes above.
+
+
+    The new Smooth Brush (S) tool lets you smooth geometry with a brush. Unlike the standard Houdini Sculpt tool, this tool remembers the brush radius when creating new nodes.
+    Also, this tool works correctly with new retopology tools.
+
+
+    The Push tool (Q) has been completely redesigned. It more accurately moves points that are close to the center of symmetry. You can also now smoothly scale parts of geometry using this tool. The ability to edit polygons with RMB menu has been removed. Push only does geometry deformation.
+    From now ou can't smooth geometry using Shift. Instead, you need to run a separate Smooth Brush tool (S).
+    Also, Push works better in symmetrical modeling and can be used with new retopology tools.
+
+
+    The Grab tool is now assigned to the tilde key ("`"). It is sticky but has a slight difference from other sticky tools triggered by a key. If the key is released quickly, the tool does not automatically go to the component selection stage but remains in the Grab state. After that, you can use the Ctrl and Shift modifiers to align the movement along the axes or along the nearest plane. This is done in order to use just one key for different types of movement. The tilde key can be used very effectively with the stylus instead of the middle mouse button.
+
+
+    New tool SetHandlePivot (D). This is the main tool for quickly positioning the current tool handle. In addition, CycleHandleAlignment (M), DetachHandle (Alt+D), OrientHandle (Shift+D) can be used to setup handles.
+
+
+    Compass removed.
+
+
+    Ramp Deform replaced with a new Fallof Transform tool (Deform Menu (Alt+D)). This tool works more interactively.
+
+
+    Smooth Points (Shift+R) renamed to Relax. The tool has improved component highlighting.
+
+
+    Bridge (H) is now a sticky drag tool like Grab, Relax

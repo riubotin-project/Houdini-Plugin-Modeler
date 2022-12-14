@@ -1,0 +1,56 @@
+[
+	"fileversion","18.0.566",
+	"name","modeler_flatten",
+	"categories","Modeler",
+	"submenu",["submenu",
+		"label","Flatten",
+		"top",["script",
+			"label","Up",
+			"icon","MODELER_flatten",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.flatten_up(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"top_left",["script",
+			"label","Edge",
+			"icon","MODELER_flatten",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.flatten_by_edge(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"left",["script",
+			"label","Left",
+			"icon","MODELER_flatten",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.flatten_left(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"bottom_left",["script",
+			"label","Edge Direction",
+			"icon","MODELER_flatten",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.flatten_by_edge_dir(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"bottom",["script",
+			"label","Down",
+			"icon","MODELER_flatten",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.flatten_down(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"bottom_right",["script",
+			"label","Face Normal",
+			"icon","MODELER_flatten",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.flatten_by_face_normal(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"right",["script",
+			"label","Right",
+			"icon","MODELER_flatten",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.flatten_right(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"top_right",["script",
+			"label","Auto",
+			"icon","MODELER_flatten",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.flatten_auto(kwargs[\"pane\"])",
+			"shortcut",""
+		]
+	]
+]

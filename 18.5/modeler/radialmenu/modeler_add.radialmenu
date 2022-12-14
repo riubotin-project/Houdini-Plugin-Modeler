@@ -1,0 +1,58 @@
+{
+	"fileversion":"18.5.376",
+	"name":"modeler_add",
+	"categories":"Modeler",
+	"pane":"scene",
+	"label":"Add",
+	"type":"submenu",
+	"items":{
+		"0":{
+			"label":"QTube",
+			"type":"script_action",
+			"icon":"MODELER_box",
+			"script":"from modeler.tools import qprimitive\n\nqprimitive(kwargs[\"pane\"], 3)"
+		},
+		"1":{
+			"label":"Draw Curve",
+			"type":"script_action",
+			"icon":"MODELER_curve",
+			"script":"radialmenu.runShelfTool({}, \"geometry_drawcurve\")"
+		},
+		"2":{
+			"label":"QSphere",
+			"type":"script_action",
+			"icon":"MODELER_box",
+			"script":"from modeler.tools import qprimitive\n\nqprimitive(kwargs[\"pane\"], 2)"
+		},
+		"3":{
+			"label":"Sym Box",
+			"type":"script_action",
+			"icon":"MODELER_sym_box",
+			"script":"from modeler.tools import radial_menu_tools\n\nradial_menu_tools.sym_box(kwargs[\"pane\"])"
+		},
+		"4":{
+			"label":"QBox",
+			"type":"script_action",
+			"icon":"MODELER_box",
+			"script":"from modeler.tools import qprimitive\n\nqprimitive(kwargs[\"pane\"], 0)"
+		},
+		"5":{
+			"label":"PolyDraw",
+			"type":"script_action",
+			"icon":"MODELER_fix_overlaps",
+			"script":"radialmenu.runShelfTool({}, \"sop_polydraw\")"
+		},
+		"6":{
+			"label":"QGrid",
+			"type":"script_action",
+			"icon":"MODELER_box",
+			"script":"from modeler.tools import qprimitive\n\nqprimitive(kwargs[\"pane\"], 1)"
+		},
+		"7":{
+			"label":"New Curve",
+			"type":"script_action",
+			"icon":"MODELER_curve",
+			"script":"with hou.RedrawBlock() as rb:\n    obj = hou.node(\"/obj\").createNode(\"geo\", \"curve_object1\")\n    obj.moveToGoodPosition()\n    sop = obj.createNode(\"curve\")\n    obj.setCurrent(True, True)\n    hou.ui.waitUntil(lambda: True)\n    kwargs[\"pane\"].setCurrentState(\"objcurve\")\n    sop.setCurrent(True, True)"
+		}
+	}
+}

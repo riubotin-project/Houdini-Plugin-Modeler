@@ -1,0 +1,56 @@
+[
+	"fileversion","18.0.599",
+	"name","modeler_network",
+	"categories","Modeler",
+	"submenu",["submenu",
+		"label","Network",
+		"top",["script",
+			"label","Stash History",
+			"icon","MODELER_network",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.stash_history(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"top_left",["script",
+			"label","Switch Nodes",
+			"icon","MODELER_network",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.switch_nodes(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"left",["script",
+			"label","Delete Groups",
+			"icon","MODELER_network",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.delete_groups(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"bottom_left",["script",
+			"label","Clean History",
+			"icon","MODELER_network",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.clean_history(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"bottom",["script",
+			"label","Pack History",
+			"icon","MODELER_network",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.pack_history(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"bottom_right",["script",
+			"label","Delete Node",
+			"icon","MODELER_network",
+			"script","from modeler.tools import DeleteNode\n\nDeleteNode(None)",
+			"shortcut",""
+		],
+		"right",["script",
+			"label","Delete Attribs",
+			"icon","MODELER_network",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.delete_attribs(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"top_right",["script",
+			"label","Merge Nodes",
+			"icon","MODELER_network",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.merge_nodes(kwargs[\"pane\"])",
+			"shortcut",""
+		]
+	]
+]

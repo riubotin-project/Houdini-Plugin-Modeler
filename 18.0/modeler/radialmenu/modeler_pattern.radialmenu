@@ -1,0 +1,56 @@
+[
+	"fileversion","18.0.599",
+	"name","modeler_pattern",
+	"categories","Modeler",
+	"submenu",["submenu",
+		"label","Pattern",
+		"top",["script",
+			"label","Set Pattern",
+			"icon","MODELER_selection_pattern",
+			"script","from modeler.ui import run_internal_command\n\nrun_internal_command(\"h.pane.gview.model.sel.patternset\")",
+			"shortcut",""
+		],
+		"top_left",["script",
+			"label","Left To End",
+			"icon","MODELER_selection_pattern",
+			"script","from modeler.ui import run_internal_command\n\nrun_internal_command(\"h.pane.gview.model.sel.patternlefttoend\")",
+			"shortcut",""
+		],
+		"left",["script",
+			"label","Left",
+			"icon","MODELER_selection_pattern",
+			"script","from modeler.ui import run_internal_command\n\nrun_internal_command(\"h.pane.gview.model.sel.patternleft\")",
+			"shortcut",""
+		],
+		"bottom_left",["script",
+			"label","Back To End",
+			"icon","MODELER_selection_pattern",
+			"script","from modeler.ui import run_internal_command\n\nrun_internal_command(\"h.pane.gview.model.sel.patternbackwardtoend\")",
+			"shortcut",""
+		],
+		"bottom",["script",
+			"label","Forward To End",
+			"icon","MODELER_selection_pattern",
+			"script","from modeler.ui import run_internal_command\n\nrun_internal_command(\"h.pane.gview.model.sel.patternforwardtoend\")",
+			"shortcut",""
+		],
+		"bottom_right",["script",
+			"label","Forward",
+			"icon","MODELER_selection_pattern",
+			"script","from modeler.ui import run_internal_command\n\nrun_internal_command(\"h.pane.gview.model.sel.patternforward\")",
+			"shortcut",""
+		],
+		"right",["script",
+			"label","Right",
+			"icon","MODELER_selection_pattern",
+			"script","from modeler.ui import run_internal_command\n\nrun_internal_command(\"h.pane.gview.model.sel.patternright\")",
+			"shortcut",""
+		],
+		"top_right",["script",
+			"label","Right To End",
+			"icon","MODELER_selection_pattern",
+			"script","from modeler.ui import run_internal_command\n\nrun_internal_command(\"h.pane.gview.model.sel.patternrighttoend\")",
+			"shortcut",""
+		]
+	]
+]

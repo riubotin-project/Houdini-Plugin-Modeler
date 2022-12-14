@@ -1,0 +1,58 @@
+{
+	"fileversion":"18.5.376",
+	"name":"modeler_topo",
+	"categories":"Modeler",
+	"pane":"scene",
+	"label":"Topo",
+	"type":"submenu",
+	"items":{
+		"0":{
+			"label":"New Patch",
+			"type":"script_action",
+			"icon":"MODELER_topo",
+			"script":"from modeler.tools import topo_tools\n\ntopo_tools.new_patch(kwargs[\"pane\"], False)"
+		},
+		"1":{
+			"label":"Project",
+			"type":"script_action",
+			"icon":"MODELER_topo",
+			"script":"from modeler.tools import topo_tools\n\ntopo_tools.project(kwargs[\"pane\"])"
+		},
+		"2":{
+			"label":"Smooth Brush",
+			"type":"script_action",
+			"icon":"MODELER_topo",
+			"script":"from modeler.tools import topo_tools\n\ntopo_tools.smooth_brush()"
+		},
+		"3":{
+			"label":"Split",
+			"type":"script_action",
+			"icon":"MODELER_topo",
+			"script":"from modeler.tools import topo_tools\n\ntopo_tools.split()"
+		},
+		"4":{
+			"label":"New Strip",
+			"type":"script_action",
+			"icon":"MODELER_topo",
+			"script":"from modeler.tools import topo_tools\n\ntopo_tools.new_patch(kwargs[\"pane\"], True)"
+		},
+		"5":{
+			"label":"Build",
+			"type":"script_action",
+			"icon":"MODELER_topo",
+			"script":"from modeler.tools import topo_tools\n\ntopo_tools.build()"
+		},
+		"6":{
+			"label":"Move Brush",
+			"type":"script_action",
+			"icon":"MODELER_topo",
+			"script":"from modeler.tools import topo_tools\n\ntopo_tools.move_brush()"
+		},
+		"7":{
+			"label":"Skin",
+			"type":"script_action",
+			"icon":"MODELER_topo",
+			"script":"from modeler.tools import topo_tools\n\ntopo_tools.skin()"
+		}
+	}
+}

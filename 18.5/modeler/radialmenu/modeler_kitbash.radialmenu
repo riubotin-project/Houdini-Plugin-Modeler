@@ -1,0 +1,38 @@
+[
+	"fileversion","18.0.599",
+	"name","modeler_kitbash",
+	"categories","Modeler",
+	"submenu",["submenu",
+		"label","KitBash",
+		"top",["script",
+			"label","KitBash",
+			"icon","MODELER_kitbash",
+			"script","kwargs[\"pane\"].runShelfTool(\"modeler_kitbash\")",
+			"shortcut",""
+		],
+		"top_left",["script",
+			"label","Auto Icon",
+			"icon","MODELER_kitbash",
+			"script","from modeler import kitbash\n\nkitbash.widget.update_item_auto_icon()",
+			"shortcut",""
+		],
+		"left",["script",
+			"label","Update Icon",
+			"icon","MODELER_kitbash",
+			"script","from modeler import kitbash\n\nkitbash.widget.update_item_icon()",
+			"shortcut",""
+		],
+		"right",["script",
+			"label","Replace Item",
+			"icon","MODELER_kitbash",
+			"script","from modeler import kitbash\n\nkitbash.widget.replace_item()",
+			"shortcut",""
+		],
+		"top_right",["script",
+			"label","New Item",
+			"icon","MODELER_kitbash",
+			"script","from modeler import kitbash\n\nkitbash.widget.new_item()",
+			"shortcut",""
+		]
+	]
+]

@@ -1,0 +1,56 @@
+[
+	"fileversion","18.0.599",
+	"name","modeler_vp_type",
+	"categories","Modeler",
+	"submenu",["submenu",
+		"label","Viewport Type",
+		"top",["script",
+			"label","Top",
+			"icon","MODELER_camera",
+			"script","from modeler.ui import radial_menu_viewport\n\nradial_menu_viewport.changeType(hou.geometryViewportType.Top)",
+			"shortcut",""
+		],
+		"top_left",["script",
+			"label","UV",
+			"icon","MODELER_camera",
+			"script","from modeler.ui import radial_menu_viewport\n\nradial_menu_viewport.changeType(hou.geometryViewportType.UV)",
+			"shortcut",""
+		],
+		"left",["script",
+			"label","Left",
+			"icon","MODELER_camera",
+			"script","from modeler.ui import radial_menu_viewport\n\nradial_menu_viewport.changeType(hou.geometryViewportType.Left)",
+			"shortcut",""
+		],
+		"bottom_left",["script",
+			"label","Back",
+			"icon","MODELER_camera",
+			"script","from modeler.ui import radial_menu_viewport\n\nradial_menu_viewport.changeType(hou.geometryViewportType.Back)",
+			"shortcut",""
+		],
+		"bottom",["script",
+			"label","Bottom",
+			"icon","MODELER_camera",
+			"script","from modeler.ui import radial_menu_viewport\n\nradial_menu_viewport.changeType(hou.geometryViewportType.Bottom)",
+			"shortcut",""
+		],
+		"bottom_right",["script",
+			"label","Front",
+			"icon","MODELER_camera",
+			"script","from modeler.ui import radial_menu_viewport\n\nradial_menu_viewport.changeType(hou.geometryViewportType.Front)",
+			"shortcut",""
+		],
+		"right",["script",
+			"label","Right",
+			"icon","MODELER_camera",
+			"script","from modeler.ui import radial_menu_viewport\n\nradial_menu_viewport.changeType(hou.geometryViewportType.Right)",
+			"shortcut",""
+		],
+		"top_right",["script",
+			"label","Persp",
+			"icon","MODELER_camera",
+			"script","from modeler.ui import radial_menu_viewport\n\nradial_menu_viewport.changeType(hou.geometryViewportType.Perspective)",
+			"shortcut",""
+		]
+	]
+]

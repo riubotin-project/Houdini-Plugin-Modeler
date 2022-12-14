@@ -1,0 +1,56 @@
+[
+	"fileversion","18.0.617",
+	"name","modeler_topo",
+	"categories","Modeler",
+	"submenu",["submenu",
+		"label","Topo",
+		"top",["script",
+			"label","New Patch",
+			"icon","MODELER_topo",
+			"script","from modeler.tools import topo_tools\n\ntopo_tools.new_patch(kwargs[\"pane\"], False)",
+			"shortcut",""
+		],
+		"top_left",["script",
+			"label","Project",
+			"icon","MODELER_topo",
+			"script","from modeler.tools import topo_tools\n\ntopo_tools.project(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"left",["script",
+			"label","Smooth Brush",
+			"icon","MODELER_topo",
+			"script","from modeler.tools import topo_tools\n\ntopo_tools.smooth_brush()",
+			"shortcut",""
+		],
+		"bottom_left",["script",
+			"label","Split",
+			"icon","MODELER_topo",
+			"script","from modeler.tools import topo_tools\n\ntopo_tools.split()",
+			"shortcut",""
+		],
+		"bottom",["script",
+			"label","New Strip",
+			"icon","MODELER_topo",
+			"script","from modeler.tools import topo_tools\n\ntopo_tools.new_patch(kwargs[\"pane\"], True)",
+			"shortcut",""
+		],
+		"bottom_right",["script",
+			"label","Build",
+			"icon","MODELER_topo",
+			"script","from modeler.tools import topo_tools\n\ntopo_tools.build()",
+			"shortcut",""
+		],
+		"right",["script",
+			"label","Move Brush",
+			"icon","MODELER_topo",
+			"script","from modeler.tools import topo_tools\n\ntopo_tools.move_brush()",
+			"shortcut",""
+		],
+		"top_right",["script",
+			"label","Skin",
+			"icon","MODELER_topo",
+			"script","from modeler.tools import topo_tools\n\ntopo_tools.skin()",
+			"shortcut",""
+		]
+	]
+]

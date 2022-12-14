@@ -1,0 +1,54 @@
+[
+	"fileversion","18.0.617",
+	"name","modeler_add",
+	"categories","Modeler",
+	"submenu",["submenu",
+		"label","Add",
+		"top",["script",
+			"label","QTube",
+			"icon","MODELER_box",
+			"script","from modeler.tools import qprimitive\n\nqprimitive(kwargs[\"pane\"], 3)",
+			"shortcut",""
+		],
+		"top_left",["script",
+			"label","Draw Curve",
+			"icon","MODELER_curve",
+			"script","radialmenu.runShelfTool({}, \"geometry_drawcurve\")",
+			"shortcut",""
+		],
+		"left",["script",
+			"label","QSphere",
+			"icon","MODELER_box",
+			"script","from modeler.tools import qprimitive\n\nqprimitive(kwargs[\"pane\"], 2)",
+			"shortcut",""
+		],
+		"bottom_left",["script",
+			"label","Sym Box",
+			"icon","MODELER_sym_box",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.sym_box(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"bottom",["script",
+			"label","QBox",
+			"icon","MODELER_box",
+			"script","from modeler.tools import qprimitive\n\nqprimitive(kwargs[\"pane\"], 0)",
+			"shortcut",""
+		],
+		"bottom_right",["script",
+			"label","PolyDraw",
+			"icon","MODELER_fix_overlaps",
+			"script","radialmenu.runShelfTool({}, \"sop_polydraw\")",
+			"shortcut",""
+		],
+		"right",["script",
+			"label","QGrid",
+			"icon","MODELER_box",
+			"script","from modeler.tools import qprimitive\n\nqprimitive(kwargs[\"pane\"], 1)",
+			"shortcut",""
+		],
+		"top_right",["script",
+			"label","New Curve",
+			"icon","MODELER_curve",
+			"script","with hou.RedrawBlock() as rb:\n    obj = hou.node(\"/obj\").createNode(\"geo\", \"curve_object1\")\n    obj.moveToGoodPosition()\n    sop = obj.createNode(\"curve\")\n    obj.setCurrent(True, True)\n    hou.ui.waitUntil(lambda: True)\n    kwargs[\"pane\"].setCurrentState(\"objcurve\")\n    sop.setCurrent(True, True)","shortcut",""]
+	]
+]

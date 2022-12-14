@@ -1,0 +1,56 @@
+[
+	"fileversion","18.0.599",
+	"name","modeler_boolean",
+	"categories","Modeler",
+	"submenu",["submenu",
+		"label","Boolean",
+		"top",["script",
+			"label","Shatter",
+			"icon","MODELER_boolean",
+			"script","from modeler.tools import boolean\n\nboolean(kwargs[\"pane\"], 3)",
+			"shortcut",""
+		],
+		"top_left",["script",
+			"label","Union",
+			"icon","MODELER_soft_boolean",
+			"script","from modeler import soft_boolean\n\nsoft_boolean.operation(0)",
+			"shortcut",""
+		],
+		"left",["script",
+			"label","Subtract",
+			"icon","MODELER_soft_boolean",
+			"script","from modeler import soft_boolean\n\nsoft_boolean.operation(2)",
+			"shortcut",""
+		],
+		"bottom_left",["script",
+			"label","Intersect",
+			"icon","MODELER_soft_boolean",
+			"script","from modeler import soft_boolean\n\nsoft_boolean.operation(1)",
+			"shortcut",""
+		],
+		"bottom",["script",
+			"label","Contour",
+			"icon","MODELER_soft_boolean",
+			"script","from modeler import soft_boolean\n\nsoft_boolean.operation(3)",
+			"shortcut",""
+		],
+		"bottom_right",["script",
+			"label","Intersect",
+			"icon","MODELER_boolean",
+			"script","from modeler.tools import boolean\n\nboolean(kwargs[\"pane\"], 1)",
+			"shortcut",""
+		],
+		"right",["script",
+			"label","Subtract",
+			"icon","MODELER_boolean",
+			"script","from modeler.tools import boolean\n\nboolean(kwargs[\"pane\"], 2)",
+			"shortcut",""
+		],
+		"top_right",["script",
+			"label","Union",
+			"icon","MODELER_boolean",
+			"script","from modeler.tools import boolean\n\nboolean(kwargs[\"pane\"], 0)",
+			"shortcut",""
+		]
+	]
+]

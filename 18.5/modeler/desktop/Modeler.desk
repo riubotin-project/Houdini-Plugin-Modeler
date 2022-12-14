@@ -1,0 +1,57 @@
+fullscreen   -1
+playbarshown 0
+playbar      3
+shelf        0
+menubar      3
+statusbar    3
+radial menu set main
+root {
+    split 0.717708 H {
+        split 0.160833 V {
+            tabs 0 1 {
+                pane panetab1 -a 0 -l 10 -H /obj/ -T OBJ -m sceneview
+            }
+            tabs 0 1 {
+                pane panetab3 -a 1 -l 10 -H /obj/ -T OBJ -m python
+                pane panetab8 -a 0 -l 10 -H /obj/ -T OBJ -m details
+            }
+        }
+        split 0.574267 V {
+            tabs 0 1 {
+                pane panetab5 -a 0 -l 10 -H /obj/ -T OBJ -m parmeditor
+            }
+            tabs 0 1 {
+                pane panetab6 -a 0 -l 10 -H /obj/ -T OBJ -m neteditor
+                pane panetab7 -a 0 -l 0 -H /obj/ -T OBJ -m materialpalette
+                pane panetab2 -a 0 -l 10 -H /obj/ -T OBJ -m iprviewer
+            }
+        }
+    }
+}
+shelfdock -o 1 -l icon_and_text -G 0.00 add shelf_set_1
+viewerstow -x open -b stow -l open -m hide -c hide -d open ${DESKNAME}.panetab1.world
+vieweroption -a 2 ${DESKNAME}.panetab1.world
+viewlayout -s 2 ${DESKNAME}.panetab1.world
+viewtype -t ortho_right ${DESKNAME}.panetab1.world.`vpname("${DESKNAME}.panetab1.world",4)`
+viewtype -t ortho_front ${DESKNAME}.panetab1.world.`vpname("${DESKNAME}.panetab1.world",3)`
+viewtype -t ortho_top ${DESKNAME}.panetab1.world.`vpname("${DESKNAME}.panetab1.world",1)`
+viewtype -t perspective ${DESKNAME}.panetab1.world.`vpname("${DESKNAME}.panetab1.world",2)`
+parmeditor -T 0.25 -w 0 panetab5
+networkeditor -p '{\n	"vop:listmode":"0",\n	"obj:listmode":"0",\n	"sop:listmode":"0",\n	"showspareinputdep":"1",\n	"showchilddep":"1",\n	"showdep":"0",\n	"showtaskgraphperf":"0",\n	"taskgraphperfstatname":"Cook Time",\n	"perfstatname":"Time",\n	"showperfstats":"1",\n	"grouplistsplit":"0.1",\n	"showtree":"1",\n	"showtypesidebar":"0",\n	"taskgraphsortcriteria":"Automatic",\n	"showparmdialogmax":"1",\n	"treesplit":"0.258532",\n	"palettesize":"150 150",\n	"typesidebarsplit":"0.198138",\n	"taskgraphcollapsemode":"Off",\n	"workitemcolorattribute":"",\n	"gridmode":"0",\n	"showtimedep":"0",\n	"overviewbounds":"0.000000 0.000000 89.850290 119.040232",\n	"overviewmode":"2",\n	"showgrouplist":"0",\n	"palettemode":"0",\n	"useworkitemcolorattribute":"0",\n	"showtasksmenu":"1",\n	"backgroundimageediting":"0",\n	"backgroundimagebrightness":"1.0",\n	"gridystep":"1.0",\n	"palettecolors":"",\n	"showmenu":"1",\n	"gridxstep":"2.0",\n	"showparmdialog":"0"\n}\n' panetab6
+netcolumns -c display,xray,select,origin,capture,bone -n OBJ panetab6
+netcolumns -c display,render,template,selectabletemplate,highlight,unload,bypass,lock -n SOP panetab6
+netcolumns -c delscript,comment -n CHOPNET panetab6
+netcolumns -c display,export,audio,bypass,lock -n CHOP panetab6
+netcolumns -c startrender,bypass,lock -n ROP panetab6
+netcolumns -c delscript,comment -n SHOP panetab6
+netcolumns -c display,render,template,bypass -n COP2 panetab6
+netcolumns -c delscript,comment -n IMG panetab6
+netcolumns -c delscript,comment,input -n VOP panetab6
+netcolumns -c delscript,comment -n VOPNET panetab6
+netcolumns -c delscript,comment -n DOP panetab6
+netcolumns -c delscript,comment -n TOP panetab6
+netcolumns -c delscript,comment -n TOPNET panetab6
+netcolumns -c display,bypass,delscript,comment,input -n LOP panetab6
+netcolumns -c delscript,comment -n MGR panetab6
+netcolumns -c delscript,comment -n DIR panetab6
+iprview -t 0.1 -l 0 -e 1 -u 1  panetab2
