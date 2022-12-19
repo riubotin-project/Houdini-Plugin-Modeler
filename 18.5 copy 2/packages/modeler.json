@@ -1,0 +1,9 @@
+{
+    "enable" : true,
+    "path": "$HOUDINI_USER_PREF_DIR/modeler",
+    "env": [
+        {
+            "var": "MODELER_PATH",
+            "value": "$HOUDINI_USER_PREF_DIR/modeler"
+        } ]
+}

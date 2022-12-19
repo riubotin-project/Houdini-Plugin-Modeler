@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <toolshelf name="modeler" label="Modeler">
+    <memberTool name="modeler_mode_toggle"/>
+    <memberTool name="modeler_kitbash"/>
+    <memberTool name="sep1"/>
+    <memberTool name="modeler_add_menu"/>
+    <memberTool name="modeler_boolean_menu"/>
+    <memberTool name="modeler_network_menu"/>
+    <memberTool name="modeler_kitbash_menu"/>
+    <memberTool name="modeler_materials_menu"/>
+    <memberTool name="sep2"/>
+    <memberTool name="modeler::qlight"/>
+    <memberTool name="modeler::backdrop"/>
+    <memberTool name="modeler::auto_unwrap"/>
+    <memberTool name="modeler::unwrap"/>
+    <memberTool name="modeler_walk_history_down"/>
+    <memberTool name="modeler_walk_history_up"/>
+    <memberTool name="sep3"/>
+    <memberTool name="modeler_reload0"/>
+  </toolshelf>
+
+  <tool name="modeler_mode_toggle" label="Modeler" icon="MODELER_logo">
+    <script scriptType="python"><![CDATA[import modeler.mode
+
+modeler.mode.toggle()]]></script>
+  </tool>
+
+  <tool name="modeler_reload" label="Reload" icon="MODELER_logo">
+    <script scriptType="python"><![CDATA[import modeler.ui
+import modeler.geo_utils
+import modeler.states
+import modeler.soft_boolean
+import modeler.kitbash
+import modeler.default_keyboard_hotkeys
+import modeler.tools
+import modeler.mode
+
+
+# UNREGISTER MODELER PYTHON STATES
+if hou.ui.isRegisteredViewerState("modeler::push"):
+    for state_name in ("modeler::push", "modeler::grab", "modeler::peak", "modeler::slide"):
+        hou.ui.unregisterViewerState(state_name)
+    
+# CLOSE CURRENTLY OPEN KITBASH PANEL
+for pt in hou.ui.paneTabs():
+    if pt.type() == hou.paneTabType.PythonPanel and pt.activeInterface().name() == 'kitbash':
+        pt.close()
+
+# FINISH MODELER MODE
+modeler.mode.finish()
+
+
+# PYTHON 3.7
+try:
+    from importlib import reload
+except ImportError:
+    pass
+    
+# RELOAD ALL MODULES
+reload(modeler.ui)
+reload(modeler.geo_utils)
+reload(modeler.states)
+reload(modeler.soft_boolean)
+reload(modeler.kitbash)
+reload(modeler.default_keyboard_hotkeys)
+reload(modeler.tools)
+reload(modeler.mode)]]></script>
+  </tool>
+
+  <tool name="sep1" label=" " icon=" ">
+    <script scriptType="python"><![CDATA[]]></script>
+  </tool>
+
+  <tool name="modeler_boolean_menu" label="Boolean" icon="MODELER_radial_menu">
+    <script scriptType="python"><![CDATA[from modeler.ui import display_shelf_tool_radial_menu
+
+display_shelf_tool_radial_menu("modeler_boolean")]]></script>
+  </tool>
+
+  <tool name="modeler_network_menu" label="Network" icon="MODELER_radial_menu">
+    <script scriptType="python"><![CDATA[from modeler.ui import display_shelf_tool_radial_menu
+
+display_shelf_tool_radial_menu("modeler_network")]]></script>
+  </tool>
+
+  <tool name="modeler_kitbash_menu" label="KitBash" icon="MODELER_radial_menu">
+    <script scriptType="python"><![CDATA[from modeler.ui import display_shelf_tool_radial_menu
+
+display_shelf_tool_radial_menu("modeler_kitbash")]]></script>
+  </tool>
+
+  <tool name="modeler_materials_menu" label="Materials" icon="Modeler_radial_menu">
+    <script scriptType="python"><![CDATA[from modeler.ui import display_shelf_tool_radial_menu
+
+display_shelf_tool_radial_menu("modeler_materials")]]></script>
+  </tool>
+
+  <tool name="sep2" label=" " icon=" ">
+    <script scriptType="python"><![CDATA[]]></script>
+  </tool>
+
+  <tool name="modeler_kitbash" label="KitBash" icon="MODELER_kitbash">
+    <script scriptType="python"><![CDATA[import hou
+
+i = []
+for pt in hou.ui.paneTabs():
+    if pt.type() == hou.paneTabType.PythonPanel and pt.activeInterface().name() == 'kitbash':
+        i.append(pt)
+
+if len(i) == 1:
+    i[0].setIsCurrentTab()
+else:
+    cpt = hou.ui.currentPaneTabs()
+    cpt_names = [pt.type().name() for pt in cpt]
+    result = hou.ui.displayMessage("There is no KitBash panel in the current desktop.\nSelect the panel next to which you want to create it.\nAfter that, save the current desktop.", buttons = cpt_names)
+    pt = cpt[result].pane().createTab(hou.paneTabType.PythonPanel)
+    pt.setActiveInterface(hou.pypanel.interfaces()["kitbash"])]]></script>
+  </tool>
+
+  <tool name="sep3" label=" " icon=" ">
+    <script scriptType="python"><![CDATA[]]></script>
+  </tool>
+
+  <tool name="modeler_reload0" label="Reload" icon="MODELER_logo">
+    <script scriptType="python"><![CDATA[import modeler.ui
+import modeler.geo_utils
+import modeler.states
+import modeler.soft_boolean
+import modeler.kitbash
+import modeler.default_keyboard_hotkeys
+import modeler.tools
+import modeler.mode
+
+
+# UNREGISTER MODELER PYTHON STATES
+if hou.ui.isRegisteredViewerState("modeler::push"):
+    for state_name in ("modeler::push", "modeler::grab", "modeler::peak", "modeler::slide"):
+        hou.ui.unregisterViewerState(state_name)
+    
+# CLOSE CURRENTLY OPEN KITBASH PANEL
+for pt in hou.ui.paneTabs():
+    if pt.type() == hou.paneTabType.PythonPanel and pt.activeInterface().name() == 'kitbash':
+        pt.close()
+
+# FINISH MODELER MODE
+modeler.mode.finish()
+
+
+# PYTHON 3.7
+try:
+    from importlib import reload
+except ImportError:
+    pass
+    
+# RELOAD ALL MODULES
+reload(modeler.ui)
+reload(modeler.geo_utils)
+reload(modeler.states)
+reload(modeler.soft_boolean)
+reload(modeler.kitbash)
+reload(modeler.default_keyboard_hotkeys)
+reload(modeler.tools)
+reload(modeler.mode)]]></script>
+  </tool>
+
+  <tool name="modeler_walk_history_up" label="History" icon="MODELER_up">
+    <script scriptType="python"><![CDATA[from modeler.tools import WalkHistoryUp
+
+WalkHistoryUp(kwargs)]]></script>
+  </tool>
+
+  <tool name="modeler_walk_history_down" label="History" icon="MODELER_down">
+    <script scriptType="python"><![CDATA[from modeler.tools import WalkHistoryDown
+
+WalkHistoryDown(kwargs)]]></script>
+  </tool>
+
+  <tool name="modeler_add_menu" label="Add" icon="MODELER_radial_menu">
+    <script scriptType="python"><![CDATA[from modeler.ui import display_shelf_tool_radial_menu
+
+display_shelf_tool_radial_menu("modeler_add")]]></script>
+  </tool>
+</shelfDocument>

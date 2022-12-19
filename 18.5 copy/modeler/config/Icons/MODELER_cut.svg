@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32"
+   height="32"
+   viewBox="0 0 8.4666665 8.4666666"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="MODELER_cut.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       gradientTransform="matrix(0.0137384,0,0,0.0137384,1.2368743,288.67919)"
+       id="linear-gradient"
+       x1="256"
+       y1="544.82001"
+       x2="256"
+       y2="-32.82"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#231f20"
+         id="stop2" />
+      <stop
+         offset="1"
+         stop-color="#58595b"
+         id="stop4" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="28.035311"
+     inkscape:cy="-0.22645314"
+     inkscape:document-units="mm"
+     inkscape:current-layer="g4557"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1057"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-page="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-bbox="true"
+     inkscape:snap-global="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:document-rotation="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-0.00937524,-288.55225)">
+    <g
+       id="g4557"
+       transform="translate(-0.51112752,0.58911265)">
+      <path
+         id="path11"
+         style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.0125112;stroke-opacity:1"
+         d="m 2.9424848,288.99374 c -0.04455,0.004 -0.088634,0.0375 -0.1411809,0.0998 -0.3544418,0.42037 -0.1481671,0.94848 0.1425927,1.32757 l 1.2659224,1.64852 -0.7793189,1.06215 a 1.1576597,1.1576597 0 0 0 -0.381659,-0.0645 c -0.6416985,0 -1.1623895,0.52173 -1.1623895,1.16568 0,0.64395 0.5205659,1.16616 1.1623895,1.16616 0.6418239,0 1.1614485,-0.52173 1.1614485,-1.16569 a 1.1621637,1.1621637 0 0 0 -0.1430633,-0.56048 l 0.6866097,-0.89509 0.6866098,0.89509 a 1.162414,1.162414 0 0 0 -0.1435339,0.56095 c 0,0.64395 0.5203455,1.16569 1.1619191,1.16569 0.6415733,0 1.1623896,-0.52174 1.1623896,-1.16569 0,-0.64395 -0.5205662,-1.16615 -1.1623896,-1.16615 a 1.1589109,1.1589109 0 0 0 -0.381659,0.0645 l -0.7793189,-1.06215 1.2659224,-1.64899 c 0.2907599,-0.37909 0.4967185,-0.9072 0.1416514,-1.32757 -0.1401255,-0.16603 -0.2197253,-0.12756 -0.4098951,0.1313 l -1.5416958,2.10262 -1.5426368,-2.10265 c -0.1186998,-0.16179 -0.1944634,-0.23764 -0.2687144,-0.23107 z m 1.8113512,2.77985 a 0.27061689,0.27061689 0 1 1 -0.2696556,0.2706 0.27011644,0.27011644 0 0 1 0.2696556,-0.2706 z m -1.7049949,1.8843 a 0.5755144,0.5755144 0 1 1 -0.5746063,0.57554 0.5755144,0.5755144 0 0 1 0.5746063,-0.57554 z m 3.4104605,0 a 0.5755144,0.5755144 0 1 1 -0.5741359,0.57554 0.5755144,0.5755144 0 0 1 0.5741359,-0.57554 z" />
+    </g>
+  </g>
+</svg>

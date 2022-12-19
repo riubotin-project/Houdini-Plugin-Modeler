@@ -1,0 +1,56 @@
+[
+	"fileversion","18.0.599",
+	"name","modeler_deform",
+	"categories","Modeler",
+	"submenu",["submenu",
+		"label","Deform ",
+		"top",["script",
+			"label","Length Scale",
+			"icon","MODELER_deform_length_scale",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.length_scale(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"top_left",["script",
+			"label","Twist",
+			"icon","MODELER_deform_twist",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.twist(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"left",["script",
+			"label","Taper",
+			"icon","MODELER_deform_taper",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.taper(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"bottom_left",["script",
+			"label","Bend",
+			"icon","MODELER_deform_bend",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.bend(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"bottom",["script",
+			"label","Falloff Transform",
+			"icon","MODELER_deform_falloff_xform",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.falloff_xform(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"bottom_right",["script",
+			"label","Mountain",
+			"icon","MODELER_deform_mountain",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.mountain(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"right",["script",
+			"label","Lattice",
+			"icon","MODELER_deform_lattice",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.lattice(kwargs[\"pane\"])",
+			"shortcut",""
+		],
+		"top_right",["script",
+			"label","Size",
+			"icon","MODELER_deform_size",
+			"script","from modeler.tools import radial_menu_tools\n\nradial_menu_tools.size(kwargs[\"pane\"])",
+			"shortcut",""
+		]
+	]
+]
