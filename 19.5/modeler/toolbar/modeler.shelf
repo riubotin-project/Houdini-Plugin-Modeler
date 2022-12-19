@@ -56,7 +56,7 @@ for pt in hou.ui.paneTabs():
 modeler.mode.finish()
 
 
-# PYTHON 3.7
+# PYTHON 3.9
 try:
     from importlib import reload
 except ImportError:
@@ -152,7 +152,7 @@ for pt in hou.ui.paneTabs():
 modeler.mode.finish()
 
 
-# PYTHON 3.7
+# PYTHON 3.9
 try:
     from importlib import reload
 except ImportError:
